@@ -3,19 +3,19 @@
     padding: 0;
     width: 100vw;
     height: 100vh;
-    // display: flex;
 }
 
 #header-main {
-    margin-left: .5em;
     font-size: 4em;
     color: black;
     text-align: center;
+    margin-top: .5em;
+    margin-bottom: 0;
 }
 
 #header-link {
     color: black;
-    display: block;
+    margin-bottom: 0;
 }
 
 .button-area {

@@ -27,20 +27,40 @@ export default class App extends Component {
     //
   }
 
+  postStudent = async (first, last, email, courses) => {
+    // let content = 
+    console.log(await requests.postStudent(
+      {
+        method: `POST`,
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(
+          {
+            firstName: first,
+            lastName: last,
+            email: email,
+            courses: courses
+          }
+        )
+      }
+    ))
+  }
+
   render() {
     return (
       <Router>
         <div className='app'>
           <NavLink to='/' className='links' id='header-link'>
-            <em><h1 className='header' id='header-main'>Guild Registration</h1></em>
+            <em><h1 className='header' id='header-main'>School Registration</h1></em>
           </NavLink>
           <Route exact path='/' render={(props) => (
             <React.Fragment>
               {/* <Main /> */}
               <section className='button-area'>
-                <NavLink to='/new-users'>
-                  <input type='button' className='buttons' id='new-users' value='New Users'/>
-                </NavLink>
+                {/* <NavLink to='/new-users'> */}
+                  <input type='button' className='buttons' id='new-users' value='New Users' onClick={this.postStudent}/>
+                {/* </NavLink> */}
                 <NavLink to='/existing-users'>
                   <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
                 </NavLink>

@@ -8,6 +8,11 @@ let requests = {
         return fetch(`http://localhost:3001/api/v1/courses:${param}`)
         .then(res => res.json())
     },
+    postStudent: async (param) => {
+        let res = await fetch(`http://localhost:3001/api/v1/students`, param);
+        let data = res.json();
+        return data;
+    }
 }
 
 export default requests;
