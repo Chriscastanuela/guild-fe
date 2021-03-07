@@ -1,8 +1,21 @@
+.app {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    // display: flex;
+}
+
 #header-main {
     margin-left: .5em;
     font-size: 4em;
-    // color: #06c;
+    color: black;
     text-align: center;
+}
+
+#header-link {
+    color: black;
+    display: block;
 }
 
 .button-area {
