@@ -1,3 +1,4 @@
+import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom';
 import React, { Component } from 'react';
 
 import './App.scss';
@@ -18,13 +19,22 @@ export default class App extends Component {
     )
   }
 
+  async getStudent() {
+    //
+  }
+
+  async getCourse() {
+    //
+  }
+
   render() {
     return (
-      <div>
-        {/* <h1 className='header' id='header-main'><em>Guild Registration</em></h1> */}
+      <div className='app'>
         <h1 className='header' id='header-main'>Guild Registration</h1>
-        <input type='button' className='button' id='new-users'/>
-        <input type='button' className='button' id='existing-users'/>
+        <section className='button-area'>
+          <input type='button' className='buttons' id='new-users' value='New Users'/>
+          <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
+        </section>
       </div>
     )
   }

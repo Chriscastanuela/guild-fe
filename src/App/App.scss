@@ -4,3 +4,33 @@
     // color: #06c;
     text-align: center;
 }
+
+.button-area {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20vh;
+    width: 50vw;
+    height: 20vh;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    align-items: center;
+}
+
+.buttons {
+    width: 15vw;
+    height: 15vh;
+    cursor: pointer;
+    box-shadow: -1px 1px 13px 0px #282D33;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vw;
+}
+
+#new-users {
+    justify-self: flex-start;
+};
+
+#existing-users {
+    // justify-self: flex-end;
+    float: right;
+};
