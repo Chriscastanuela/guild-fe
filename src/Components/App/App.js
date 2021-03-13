@@ -55,7 +55,6 @@ export default class App extends Component {
           </NavLink>
           <Route exact path='/' render={(props) => (
             <React.Fragment>
-              {/* <Main /> */}
               <section className='button-area'>
                 <NavLink to='/new-users'>
                   <input type='button' className='buttons' id='new-users' value='New Users'/>
