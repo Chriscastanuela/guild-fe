@@ -2,6 +2,7 @@ import {BrowserRouter as Router, Route, Switch, Redirect, NavLink} from 'react-r
 import React, { Component } from 'react';
 
 import './App.scss';
+import NewUsers from '../New-Users/NewUsers'
 
 import requests from '../../APICalls/Get-Info';
 
@@ -19,32 +20,30 @@ export default class App extends Component {
     )
   }
 
-  async getStudent() {
+  getStudent() {
+    //
+    this.setState({student: null})
+  }
+
+  getCourse() {
     //
   }
 
-  async getCourse() {
-    //
-  }
-
-  postStudent = async (first, last, email, courses) => {
-    // let content = 
-    console.log(await requests.postStudent(
-      {
-        method: `POST`,
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(
-          {
-            firstName: first,
-            lastName: last,
-            email: email,
-            courses: courses
-          }
-        )
-      }
-    ))
+  postStudent = (first, last, email, courses) => {
+    let content = {
+      firstName: first,
+      lastName: last,
+      email: email,
+      courses: courses
+    }
+    let thePost = {
+      method: `POST`,
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(content)
+    }
+    requests.postStudent(thePost)
   }
 
   render() {
@@ -58,14 +57,17 @@ export default class App extends Component {
             <React.Fragment>
               {/* <Main /> */}
               <section className='button-area'>
-                {/* <NavLink to='/new-users'> */}
-                  <input type='button' className='buttons' id='new-users' value='New Users' onClick={this.postStudent}/>
-                {/* </NavLink> */}
+                <NavLink to='/new-users'>
+                  <input type='button' className='buttons' id='new-users' value='New Users'/>
+                </NavLink>
                 <NavLink to='/existing-users'>
                   <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
                 </NavLink>
               </section>
             </React.Fragment>
+          )}/>
+          <Route path='/new-users' render={props => (
+            <NewUsers/>
           )}/>
         </div>
       </Router>

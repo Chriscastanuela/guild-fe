@@ -1,11 +1,11 @@
 let requests = {
-    getStudent: (param) => {
+    getStudent: async (param) => {
         // return fetch(`https://localhost:3001/api/v1/students:${param}`)
-        return fetch(`http://localhost:3001/api/v1/students`)
+        return await fetch(`http://localhost:3001/api/v1/students`)
         .then(res => res.json())
     },
-    getCourse: (param) => {
-        return fetch(`http://localhost:3001/api/v1/courses:${param}`)
+    getCourse: async (param) => {
+        return await fetch(`http://localhost:3001/api/v1/courses:${param}`)
         .then(res => res.json())
     },
     postStudent: async (param) => {
