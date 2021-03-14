@@ -6,7 +6,9 @@ export default class NewUsers extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            //
+            firstName: '',
+            lastName: '',
+            email: ''
         }
     }
     
