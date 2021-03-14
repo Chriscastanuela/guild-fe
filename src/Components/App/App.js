@@ -80,28 +80,17 @@ export default class App extends Component {
       <Router>
         <div className='app'>
           <NavLink to='/' className='links' id='header-link'>
-            <em><h1 className='header' id='header-main'>School Registration</h1></em>
-            <section className='button-area'>
-                <NavLink to='/new-users'>
-                  <input type='button' className='buttons' id='new-users' value='New Users'/>
-                </NavLink>
-                <NavLink to='/existing-users'>
-                  <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
-                </NavLink>
-              </section>
+            <section className='header'>
+              <em><h1 className='header-title' id='header-main'>School Registration</h1></em>
+              {/* <section className='button-area'> */}
+                  <NavLink to='/new-users'>
+                    <input type='button' className='buttons' id='new-users' value='New Users'/>
+                  </NavLink>
+                  <NavLink to='/existing-users'>
+                    <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
+                  </NavLink>
+            </section>
           </NavLink>
-          {/* <Route exact path='/' render={(props) => (
-            <React.Fragment>
-              <section className='button-area'>
-                <NavLink to='/new-users'>
-                  <input type='button' className='buttons' id='new-users' value='New Users'/>
-                </NavLink>
-                <NavLink to='/existing-users'>
-                  <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
-                </NavLink>
-              </section>
-            </React.Fragment>
-          )}/> */}
           <Route 
           path='/new-users' 
           render={props =>
