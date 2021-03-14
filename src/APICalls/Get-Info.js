@@ -1,5 +1,5 @@
 let requests = {
-    getStudent: async (param) => {
+    getStudent: async () => {
         return await fetch(`http://localhost:3001/api/v1/students`)
         .then(res => res.json())
     },
@@ -9,6 +9,11 @@ let requests = {
     },
     postStudent: async (param) => {
         let res = await fetch(`http://localhost:3001/api/v1/students`, param);
+        let data = res.json();
+        return data;
+    },
+    postCourse: async (param) => {
+        let res = await fetch(`http://localhost:3001/api/vi/students/course`, param);
         let data = res.json();
         return data;
     }

@@ -46,9 +46,20 @@ export default class App extends Component {
     requests.postStudent(thePost)
   }
 
-  // postCourse = () => {
-  //   //
-  // }
+  postCourse = (studentId, courseId) => {
+    let content = {
+      studentId: studentId,
+      courseId: courseId
+    }
+    let thePost = {
+      method: `POST`,
+      headers: {
+          'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(content)
+    }
+    requests.postStudent(thePost)
+  }
 
   render() {
     return (
@@ -69,9 +80,7 @@ export default class App extends Component {
               </section>
             </React.Fragment>
           )}/>
-          <Route path='/new-users' render={props => (
-            <NewUsers/>
-          )}/>
+          <Route path='/new-users' render={props => <NewUsers/>}/>
         </div>
       </Router>
     )
