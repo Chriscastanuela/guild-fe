@@ -20,7 +20,10 @@ export default class NewUsers extends Component {
         return (
             <div className='input-area'>
                 <em><h1 className='header' id='new-users'>Register</h1></em>
-                <input type='text'/>
+                <input type='text' placeholder='First Name' name='firstName' value={this.state.firstName} onChange={() => this.formUpdate()} autoComplete='off'/>
+                <input type='text' placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={() => this.formUpdate()} autoComplete='off'/>
+                <input type='text' placeholder='Email' name='email' value={this.state.email} onChange={() => this.formUpdate()} autoComplete='off'/>
+                <input type='button' value='Submit' onClick={() => this.props.postStudent()}/>
             </div>
         )
     }

@@ -30,12 +30,11 @@ export default class App extends Component {
     //
   }
 
-  postStudent = (first, last, email, courses) => {
+  postStudent = (first, last, email) => {
     let content = {
       firstName: first,
       lastName: last,
       email: email,
-      courses: courses
     }
     let thePost = {
       method: `POST`,
