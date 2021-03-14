@@ -5,5 +5,12 @@
     margin-right: auto;
     background-color: #EFEFEF;
     margin-top: 5vw;
-    // box-shadow: -1px 1px 13px 0px #282D33;
+    box-shadow: -1px 1px 13px 0px #282D33;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
 }
+

@@ -19,11 +19,36 @@ export default class NewUsers extends Component {
     render() {
         return (
             <div className='input-area'>
-                <em><h1 className='header' id='new-users'>Register</h1></em>
-                <input type='text' placeholder='First Name' name='firstName' value={this.state.firstName} onChange={() => this.formUpdate()} autoComplete='off'/>
-                <input type='text' placeholder='Last Name' name='lastName' value={this.state.lastName} onChange={() => this.formUpdate()} autoComplete='off'/>
-                <input type='text' placeholder='Email' name='email' value={this.state.email} onChange={() => this.formUpdate()} autoComplete='off'/>
-                <input type='button' value='Submit' onClick={() => this.props.postStudent()}/>
+                <em><h1 className='header' id='new-users'>Register Here</h1></em>
+                <input 
+                type='text' 
+                placeholder='First Name' 
+                name='firstName' 
+                value={this.state.firstName} 
+                onChange={(e) => this.formUpdate(e)} 
+                autoComplete='off'
+                />
+                <input 
+                type='text' 
+                placeholder='Last Name' 
+                name='lastName' 
+                value={this.state.lastName} 
+                onChange={(e) => this.formUpdate(e)} 
+                autoComplete='off'
+                />
+                <input 
+                type='text' 
+                placeholder='Email' 
+                name='email' 
+                value={this.state.email} 
+                onChange={(e) => this.formUpdate(e)} 
+                autoComplete='off'
+                />
+                <input 
+                type='button' 
+                value='Submit' 
+                onClick={() => this.props.postStudent(this.state.firstName, this.state.lastName, this.state.email)}
+                />
             </div>
         )
     }

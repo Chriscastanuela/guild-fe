@@ -17,16 +17,16 @@ export default class App extends Component {
 
   async componentDidMount() {
     console.log(
-      await requests.getStudent('aaa')
+      await requests.getStudent()
     )
   }
 
-  getStudent() {
+  getTheStudent() {
     //
     this.setState({student: null})
   }
 
-  getCourse() {
+  getTheCourses() {
     //
   }
 
