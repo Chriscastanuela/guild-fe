@@ -8,12 +8,16 @@ export default class NewUsers extends Component {
         this.state = {
             firstName: '',
             lastName: '',
-            email: ''
+            email: '',
         }
     }
     
-    formUpdate(e) {
+    setStateFromForm(e) {
         this.setState({[e.target.name]: e.target.value});
+    }
+
+    clearInputs = (state) => {
+        this.setState({[state]: ''});
     }
     
     render() {
@@ -25,7 +29,7 @@ export default class NewUsers extends Component {
                 placeholder='First Name' 
                 name='firstName' 
                 value={this.state.firstName} 
-                onChange={(e) => this.formUpdate(e)} 
+                onChange={(e) => this.setStateFromForm(e)} 
                 autoComplete='off'
                 />
                 <input 
@@ -33,22 +37,26 @@ export default class NewUsers extends Component {
                 placeholder='Last Name' 
                 name='lastName' 
                 value={this.state.lastName} 
-                onChange={(e) => this.formUpdate(e)} 
+                onChange={(e) => this.setStateFromForm(e)} 
                 autoComplete='off'
                 />
                 <input 
-                type='text' 
+                type='text'
                 placeholder='Email' 
                 name='email' 
                 value={this.state.email} 
-                onChange={(e) => this.formUpdate(e)} 
+                onChange={(e) => this.setStateFromForm(e)} 
                 autoComplete='off'
                 />
                 <input 
                 type='button' 
                 value='Submit' 
-                onClick={() => this.props.postStudent(this.state.firstName, this.state.lastName, this.state.email)}
+                onClick={
+                    () => this.props.postStudent(this.state.firstName, this.state.lastName, this.state.email)
+                }
+                className='button'
                 />
+                <p>{this.props.postStudentResponse}</p>
             </div>
         )
     }

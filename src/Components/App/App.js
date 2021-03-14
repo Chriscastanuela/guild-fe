@@ -11,7 +11,8 @@ export default class App extends Component {
   constructor() {
     super()
     this.state = {
-      student: null
+      student: null,
+      postStudentResponse: ''
     }
   }
 
@@ -21,16 +22,21 @@ export default class App extends Component {
     )
   }
 
-  getTheStudent() {
-    //
-    this.setState({student: null})
+  clearInputs = (state) => {
+    this.setState({[state]: ''});
+  }
+
+  async getTheStudent(param) {
+    // this.setState({student: null})
+    return await requests.getSpecificStudent(param);
+
   }
 
   getTheCourses() {
     //
   }
 
-  postStudent = (first, last, email) => {
+  postStudent = async (first, last, email) => {
     let content = {
       firstName: first,
       lastName: last,
@@ -43,7 +49,15 @@ export default class App extends Component {
       },
       body: JSON.stringify(content)
     }
-    requests.postStudent(thePost)
+    let answer = await requests.postStudent(thePost);
+    if (answer.error) {
+      this.setState({postStudentResponse: answer.error});
+    } else {
+      this.setState({student: answer});
+      this.setState({postStudentResponse: `Registered ${answer.firstName}`});
+    }
+    console.log(answer);
+    return answer;
   }
 
   postCourse = (studentId, courseId) => {
@@ -67,8 +81,16 @@ export default class App extends Component {
         <div className='app'>
           <NavLink to='/' className='links' id='header-link'>
             <em><h1 className='header' id='header-main'>School Registration</h1></em>
+            <section className='button-area'>
+                <NavLink to='/new-users'>
+                  <input type='button' className='buttons' id='new-users' value='New Users'/>
+                </NavLink>
+                <NavLink to='/existing-users'>
+                  <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
+                </NavLink>
+              </section>
           </NavLink>
-          <Route exact path='/' render={(props) => (
+          {/* <Route exact path='/' render={(props) => (
             <React.Fragment>
               <section className='button-area'>
                 <NavLink to='/new-users'>
@@ -79,8 +101,17 @@ export default class App extends Component {
                 </NavLink>
               </section>
             </React.Fragment>
-          )}/>
-          <Route path='/new-users' render={props => <NewUsers postStudent={this.postStudent}/>}/>
+          )}/> */}
+          <Route 
+          path='/new-users' 
+          render={props =>
+            <NewUsers 
+            postStudent={this.postStudent} 
+            postStudentResponse={this.state.postStudentResponse}
+            clearInputs={this.clearInputs}
+            />
+          }
+          />
           <Route path='/existing-users' render={props => <ExistingUsers postCourse={this.postCourse}/>}/>
         </div>
       </Router>
