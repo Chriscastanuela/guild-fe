@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 
 import './App.scss';
 import NewUsers from '../New-Users/NewUsers'
-import NewUsers from '../Existing-Users/ExistingUsers'
+import ExistingUsers from '../Existing-Users/ExistingUsers'
 
 import requests from '../../APICalls/Get-Info';
 
