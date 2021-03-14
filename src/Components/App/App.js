@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 
 import './App.scss';
 import NewUsers from '../New-Users/NewUsers'
+import NewUsers from '../Existing-Users/ExistingUsers'
 
 import requests from '../../APICalls/Get-Info';
 
@@ -80,7 +81,8 @@ export default class App extends Component {
               </section>
             </React.Fragment>
           )}/>
-          <Route path='/new-users' render={props => <NewUsers/>}/>
+          <Route path='/new-users' render={props => <NewUsers postStudent={this.postStudent}/>}/>
+          <Route path='/existing-users' render={props => <ExistingUsers postCourse={this.postCourse}/>}/>
         </div>
       </Router>
     )
