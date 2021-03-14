@@ -1,6 +1,5 @@
 let requests = {
     getStudent: async (param) => {
-        // return fetch(`https://localhost:3001/api/v1/students:${param}`)
         return await fetch(`http://localhost:3001/api/v1/students`)
         .then(res => res.json())
     },
