@@ -18,7 +18,8 @@ export default class App extends Component {
 
   async componentDidMount() {
     console.log(
-      await requests.getStudents()
+      await requests.getStudents(),
+      await requests.getCourses()
     )
   }
 
