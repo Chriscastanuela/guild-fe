@@ -23,7 +23,7 @@ export default class NewUsers extends Component {
     render() {
         return (
             <div className='input-area'>
-                <em><h1 className='header' id='new-users'>Register Here</h1></em>
+                <em><h1 className='header' id='register-here'>Register Here</h1></em>
                 <input 
                 type='text' 
                 placeholder='First Name' 
