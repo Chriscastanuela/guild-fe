@@ -12,7 +12,8 @@ export default class App extends Component {
     super()
     this.state = {
       student: null,
-      postStudentResponse: ''
+      postStudentResponse: '',
+      coursesAvailable: {}
     }
   }
 
@@ -21,20 +22,7 @@ export default class App extends Component {
       await requests.getStudents(),
       await requests.getCourses()
     )
-  }
-
-  clearInputs = (state) => {
-    this.setState({[state]: ''});
-  }
-
-  async getTheStudent(param) {
-    // this.setState({student: null})
-    return await requests.getSpecificStudent(param);
-
-  }
-
-  getTheCourses() {
-    //
+    this.setState({coursesAvailable: await requests.getCourses()})
   }
 
   postStudent = async (first, last, email) => {
@@ -102,7 +90,14 @@ export default class App extends Component {
             />
           }
           />
-          <Route path='/existing-users' render={props => <ExistingUsers postCourse={this.postCourse}/>}/>
+          <Route 
+          path='/existing-users' 
+          render={props => 
+            <ExistingUsers 
+            postCourse={this.postCourse}
+            getTheCourses={this.getTheCourses}
+            />
+          }/>
         </div>
       </Router>
     )
