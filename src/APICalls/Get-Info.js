@@ -1,5 +1,5 @@
 let requests = {
-    getStudent: async () => {
+    getStudents: async () => {
         return await fetch(`http://localhost:3001/api/v1/students`)
         .then(res => res.json())
     },
