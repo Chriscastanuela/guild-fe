@@ -71,13 +71,12 @@ export default class App extends Component {
           <NavLink to='/' className='links' id='header-link'>
             <section className='header'>
               <em><h1 className='header-title' id='header-main'>School Registration</h1></em>
-              {/* <section className='button-area'> */}
-                  <NavLink to='/new-users'>
-                    <input type='button' className='buttons' id='new-users' value='New Users'/>
-                  </NavLink>
-                  <NavLink to='/existing-users'>
-                    <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
-                  </NavLink>
+              <NavLink to='/new-users'>
+                <input type='button' className='buttons' id='new-users' value='New Users'/>
+              </NavLink>
+              <NavLink to='/existing-users'>
+                <input type='button' className='buttons' id='existing-users' value='Existing Users'/>
+              </NavLink>
             </section>
           </NavLink>
           <Route 
