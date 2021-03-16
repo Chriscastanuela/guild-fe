@@ -27,18 +27,19 @@ export default class ExistingUsers extends Component {
             <section className='sign-up-field'>
                 <section className='sign-up-area' id='left'>
                     <h2 className='available-courses'>Available Courses</h2>
-                    <div style={{backgroundColor:'white', width:'100%'}}>a</div>
                     {
                         this.props.coursesAvailable.courses ? 
                         this.props.coursesAvailable.courses.map(a => 
-                            <div className='course'>
-                                <ul>
-                                    {console.log(a.id)}
-                                    <li>{`ID: ${a.id}`}</li>
-                                    <li>{`Name: ${a.name}`}</li>
-                                    <li>{`Time: ${a.time}`}</li>
-                                </ul>
-                            </div>
+                            (
+                                <div className='course'>
+                                    <ul className='list'>
+                                        {console.log(a.id)}
+                                        <li>{`ID: ${a.id}`}</li>
+                                        <li>{`Name: ${a.name}`}</li>
+                                        <li>{`Time: ${a.time}`}</li>
+                                    </ul>
+                                </div>
+                            )
                         )
                         : null
                     }
