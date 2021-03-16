@@ -26,6 +26,7 @@ export default class ExistingUsers extends Component {
         return (
             <section className='sign-up-field'>
                 <section className='sign-up-area' id='left'>
+                    <h2 className='available-courses'>Available Courses</h2>
                     <div style={{backgroundColor:'white', width:'100%'}}>a</div>
                     {
                         this.props.coursesAvailable.courses ? 
