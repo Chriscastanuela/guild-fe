@@ -94,7 +94,7 @@ export default class App extends Component {
           render={props => 
             <ExistingUsers 
             postCourse={this.postCourse}
-            getTheCourses={this.getTheCourses}
+            coursesAvailable={this.state.coursesAvailable}
             />
           }/>
         </div>
