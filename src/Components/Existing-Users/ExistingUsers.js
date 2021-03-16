@@ -4,22 +4,12 @@ import {BrowserRouter as Route} from 'react-router-dom';
 import './ExistingUsers.scss'
 
 export default class ExistingUsers extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            //
-        }
-    }
-    
-    formUpdate(e) {
-        this.setState({[e.target.name]: e.target.value});
-    }
-
     render() {
         return (
-            <div>
-                <em><h1 id='sign-up'>Sign Up</h1></em>
-            </div>
+            <section className='sign-up-field'>
+                <section className='sign-up-area' id='left'></section>
+                <section className='sign-up-area' id='right'></section>
+            </section>
         )
     }
 }

@@ -22,7 +22,7 @@ export default class NewUsers extends Component {
     
     render() {
         return (
-            <div className='input-area'>
+            <section className='input-area'>
                 <em><h1 className='header' id='register-here'>Register Here</h1></em>
                 <input 
                 type='text' 
@@ -57,7 +57,7 @@ export default class NewUsers extends Component {
                 className='button'
                 />
                 <p>{this.props.postStudentResponse}</p>
-            </div>
+            </section>
         )
     }
 }
