@@ -21,3 +21,10 @@
 .button {
     cursor: pointer;
 }
+
+p {
+    margin: 0;
+    width: 15em;
+    overflow-x: scroll;
+    // border: solid;
+}

@@ -25,6 +25,10 @@ export default class App extends Component {
     this.setState({coursesAvailable: await requests.getCourses()})
   }
 
+  getSpecificStudent = async (id) => {
+    return await requests.getSpecificStudent(id)
+  }
+
   postStudent = async (first, last, email) => {
     let content = {
       firstName: first,
@@ -43,7 +47,7 @@ export default class App extends Component {
       this.setState({postStudentResponse: answer.error});
     } else {
       this.setState({student: answer});
-      this.setState({postStudentResponse: `Registered ${answer.firstName}`});
+      this.setState({postStudentResponse: `Registered ${answer.firstName} with ID ${answer.id}. Please keep your ID to log in.`});
     }
     console.log(answer);
     return answer;
@@ -95,6 +99,8 @@ export default class App extends Component {
             <ExistingUsers 
             postCourse={this.postCourse}
             coursesAvailable={this.state.coursesAvailable}
+            student={this.state.student}
+            getSpecificStudent={this.getSpecificStudent}
             />
           }/>
         </div>

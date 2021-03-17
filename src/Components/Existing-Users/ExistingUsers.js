@@ -1,25 +1,24 @@
 import React, { Component } from 'react';
 import {BrowserRouter as Route} from 'react-router-dom';
 
+import requests from '../../APICalls/Get-Info'
+
 import './ExistingUsers.scss'
 
 export default class ExistingUsers extends Component {
     constructor(props) {
         super(props)
-        this.state = {}
+        this.state = {
+            id: null,
+        }
     }
 
-    course = (a) => {
-        return (
-            <div>
-                <ul>
-                    {console.log(a.id)}
-                    <li>{`ID: ${a.id}`}</li>
-                    <li>{`Name: ${a.name}`}</li>
-                    <li>{`Time: ${a.time}`}</li>
-                </ul>
-            </div>
-        )
+    componentDidMount = () => {
+        //
+    }
+
+    setStateFromForm(e) {
+        this.setState({[e.target.name]: e.target.value});
     }
     
     render() {
@@ -33,7 +32,6 @@ export default class ExistingUsers extends Component {
                             (
                                 <div className='course'>
                                     <ul className='list'>
-                                        {console.log(a.id)}
                                         <li>{`ID: ${a.id}`}</li>
                                         <li>{`Name: ${a.name}`}</li>
                                         <li>{`Time: ${a.time}`}</li>
@@ -44,7 +42,29 @@ export default class ExistingUsers extends Component {
                         : null
                     }
                 </section>
-                <section className='sign-up-area' id='right'></section>
+                <section className='sign-up-area' id='right'>
+                    {
+                        this.props.student == null ? (
+                            <span><h2 className='available-courses'>Login</h2>
+                            <input 
+                            type='text'
+                            placeholder='ID' 
+                            name='id'
+                            value={this.state.id}
+                            onChange={(e) => this.setStateFromForm(e)} 
+                            autoComplete='off'
+                            /> 
+                            <input 
+                            type='button' 
+                            value='Submit' 
+                            onClick={() => this.props.getSpecificStudent(this.state.id)}
+                            className='button'
+                            /></span>
+                        ) : (
+                            <h2 className='available-courses'>Sign up for a Class {this.props.student.firstName}!</h2>
+                        )
+                    }
+                </section>
             </section>
         )
     }

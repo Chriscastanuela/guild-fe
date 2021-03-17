@@ -15,10 +15,6 @@ export default class NewUsers extends Component {
     setStateFromForm(e) {
         this.setState({[e.target.name]: e.target.value});
     }
-
-    clearInputs = (state) => {
-        this.setState({[state]: ''});
-    }
     
     render() {
         return (

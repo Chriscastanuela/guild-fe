@@ -4,7 +4,7 @@ let requests = {
         .then(res => res.json())
     },
     getSpecificStudent: async (param) => {
-        return await fetch(`http://localhost:3001/api/v1/students:${param}`)
+        return await fetch(`http://localhost:3001/api/v1/student${param}`)
         .then(res => res.json())
     },
     getCourses: async () => {
