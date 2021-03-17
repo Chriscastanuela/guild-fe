@@ -61,7 +61,7 @@ export default class ExistingUsers extends Component {
                             className='button'
                             /></span>
                         ) : (
-                            <h2 className='available-courses'>Sign up for a Class {this.props.student.firstName}!</h2>
+                            <h2 className='available-courses'>Sign up for a Class, {this.props.student.firstName}!</h2>
                         )
                     }
                 </section>

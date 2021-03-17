@@ -26,7 +26,10 @@ export default class App extends Component {
   }
 
   getSpecificStudent = async (id) => {
-    return await requests.getSpecificStudent(id)
+    let answer = await requests.getSpecificStudent(id);
+    console.log(answer);
+    this.setState({student: answer.student})
+    return answer;
   }
 
   postStudent = async (first, last, email) => {
