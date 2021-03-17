@@ -10,6 +10,7 @@ export default class ExistingUsers extends Component {
         super(props)
         this.state = {
             id: null,
+            classId: null,
         }
     }
 
@@ -61,7 +62,21 @@ export default class ExistingUsers extends Component {
                             className='button'
                             /></span>
                         ) : (
-                            <h2 className='available-courses'>Sign up for a Class, {this.props.student.firstName}!</h2>
+                            <span><h2 className='available-courses'>Sign up for a Class, {this.props.student.firstName}!</h2>
+                            <input 
+                            type='text'
+                            placeholder='ID' 
+                            name='classId'
+                            value={this.state.classId}
+                            onChange={(e) => this.setStateFromForm(e)} 
+                            autoComplete='off'
+                            /> 
+                            <input 
+                            type='button' 
+                            value='Submit' 
+                            onClick={() => this.props.getSpecificStudent(this.state.id)}
+                            className='button'
+                            /></span>
                         )
                     }
                 </section>
