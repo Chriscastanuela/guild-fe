@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch, Redirect, NavLink} from 'react-router-dom';
+import {BrowserRouter as Router, Route, NavLink} from 'react-router-dom';
 import React, { Component } from 'react';
 
 import './App.scss';
@@ -13,7 +13,8 @@ export default class App extends Component {
     this.state = {
       student: null,
       postStudentResponse: '',
-      coursesAvailable: {}
+      coursesAvailable: {},
+      postCourseResponse: null
     }
   }
 
@@ -27,7 +28,6 @@ export default class App extends Component {
 
   getSpecificStudent = async (id) => {
     let answer = await requests.getSpecificStudent(id);
-    console.log(answer);
     this.setState({student: answer.student})
     return answer;
   }
@@ -56,9 +56,9 @@ export default class App extends Component {
     return answer;
   }
 
-  postCourse = (studentId, courseId) => {
+  postCourse = async (courseId) => {
     let content = {
-      studentId: studentId,
+      studentId: this.state.student.id,
       courseId: courseId
     }
     let thePost = {
@@ -68,7 +68,9 @@ export default class App extends Component {
       },
       body: JSON.stringify(content)
     }
-    requests.postStudent(thePost)
+    let answer = await requests.postCourse(thePost);
+    console.log(answer);
+    this.setState({postCourseResponse: answer})
   }
 
   render() {
@@ -104,6 +106,7 @@ export default class App extends Component {
             coursesAvailable={this.state.coursesAvailable}
             student={this.state.student}
             getSpecificStudent={this.getSpecificStudent}
+            postCourseResponse={this.state.postCourseResponse}
             />
           }/>
         </div>

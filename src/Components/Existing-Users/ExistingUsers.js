@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import {BrowserRouter as Route} from 'react-router-dom';
-
-import requests from '../../APICalls/Get-Info'
 
 import './ExistingUsers.scss'
 
@@ -9,13 +6,9 @@ export default class ExistingUsers extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            id: null,
-            classId: null,
+            id: '',
+            classId: '',
         }
-    }
-
-    componentDidMount = () => {
-        //
     }
 
     setStateFromForm(e) {
@@ -23,6 +16,7 @@ export default class ExistingUsers extends Component {
     }
     
     render() {
+        let theKey = 0;
         return (
             <section className='sign-up-field'>
                 <section className='sign-up-area' id='left'>
@@ -31,7 +25,8 @@ export default class ExistingUsers extends Component {
                         this.props.coursesAvailable.courses ? 
                         this.props.coursesAvailable.courses.map(a => 
                             (
-                                <div className='course'>
+                                <div className='course' key={theKey}>
+                                    <script>{theKey += 1}</script>
                                     <ul className='list'>
                                         <li>{`ID: ${a.id}`}</li>
                                         <li>{`Name: ${a.name}`}</li>
@@ -74,9 +69,12 @@ export default class ExistingUsers extends Component {
                             <input 
                             type='button' 
                             value='Submit' 
-                            onClick={() => this.props.getSpecificStudent(this.state.id)}
+                            onClick={
+                                () => this.props.postCourse(this.state.classId),
+                                () => this.setState({classId: ''})
+                            }
                             className='button'
-                            /></span>
+                            /><p>{this.props.postCourseResponse}</p></span>
                         )
                     }
                 </section>

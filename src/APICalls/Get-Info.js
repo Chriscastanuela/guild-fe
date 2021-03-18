@@ -1,4 +1,8 @@
 let requests = {
+    getCourses: async () => {
+        return await fetch(`http://localhost:3001/api/vi/courses`)
+        .then(res => res.json())
+    },
     getStudents: async () => {
         return await fetch(`http://localhost:3001/api/v1/students`)
         .then(res => res.json())
@@ -7,23 +11,17 @@ let requests = {
         return await fetch(`http://localhost:3001/api/v1/student${param}`)
         .then(res => res.json())
     },
-    getCourses: async () => {
-        return await fetch(`http://localhost:3001/api/vi/courses`)
-        .then(res => res.json())
-    },
     getCourse: async (param) => {
         return await fetch(`http://localhost:3001/api/v1/courses:${param}`)
         .then(res => res.json())
     },
     postStudent: async (param) => {
-        let res = await fetch(`http://localhost:3001/api/v1/students`, param);
-        let data = res.json();
-        return data;
+        return await fetch(`http://localhost:3001/api/v1/students`, param)
+        .then(res => res.json());
     },
     postCourse: async (param) => {
-        let res = await fetch(`http://localhost:3001/api/vi/students/course`, param);
-        let data = res.json();
-        return data;
+        return await fetch(`http://localhost:3001/api/v1/course`, param)
+        .then(res => res.json());
     }
 }
 
