@@ -7,7 +7,7 @@ export default class ExistingUsers extends Component {
         super(props)
         this.state = {
             id: '',
-            classId: '',
+            classId: ''
         }
     }
 
@@ -70,11 +70,10 @@ export default class ExistingUsers extends Component {
                             type='button' 
                             value='Submit' 
                             onClick={
-                                () => this.props.postCourse(this.state.classId),
-                                () => this.setState({classId: ''})
+                                (() => this.props.postCourse(this.state.classId) && this.setState({classId: ''}))
                             }
                             className='button'
-                            /><p>{this.props.postCourseResponse}</p></span>
+                            /></span>
                         )
                     }
                 </section>

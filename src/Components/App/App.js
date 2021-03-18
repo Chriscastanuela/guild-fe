@@ -52,7 +52,6 @@ export default class App extends Component {
       this.setState({student: answer});
       this.setState({postStudentResponse: `Registered ${answer.firstName} with ID ${answer.id}. Please keep your ID to log in.`});
     }
-    console.log(answer);
     return answer;
   }
 
@@ -69,7 +68,6 @@ export default class App extends Component {
       body: JSON.stringify(content)
     }
     let answer = await requests.postCourse(thePost);
-    console.log(answer);
     this.setState({postCourseResponse: answer})
   }
 
