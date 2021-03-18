@@ -1,0 +1,30 @@
+.input-area {
+    width: 25vw;
+    height: 25vw;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #F6F9FC;
+    margin-top: 4vw;
+    box-shadow: -1px 1px 13px 0px #282D33;
+    border-radius: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    justify-content: space-evenly;
+}
+
+#register-here {
+    font-family: 'Caveat', cursive;
+}
+
+.button {
+    cursor: pointer;
+}
+
+p {
+    margin: 0;
+    width: 15em;
+    overflow-x: scroll;
+    // border: solid;
+}

@@ -1,0 +1,49 @@
+.app {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1em;
+    margin-right: 2em;
+}
+
+#header-main {
+    font-size: 3em;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 5em;
+    font-family: 'Caveat', cursive;
+}
+
+#header-link {
+    color: black;
+    margin-bottom: 0;
+}
+
+.buttons {
+    width: 15vw;
+    height: 6vh;
+    cursor: pointer;
+    box-shadow: -1px 1px 13px 0px #282D33;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2vw;
+    background-color: #F6F9FC;
+    border: none;
+}
+
+#new-users {
+    justify-self: flex-start;
+};
+
+#existing-users {
+    float: right;
+};
