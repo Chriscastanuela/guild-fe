@@ -36,6 +36,7 @@ This website can register a new student, log a student in, and allows students t
     <li>Express</li>
     <li>Cors</li>
 </ul>
+React.js | React Router | SASS/SCSS | Git/Github | Fetch API | React Testing Library | Jest | ES6 Javascript | HTML | Express | Cors
 
 <a name="i"></a>
 # Installation
