@@ -23,7 +23,7 @@ This website can register a new student, log a student in, and allows students t
 # Built With
 
 [Back to Main](#mainContents)
-<!-- <ul>
+<ul>
     <li>React.js</li>
     <li>React Router</li>
     <li>SASS/SCSS</li>
@@ -31,12 +31,12 @@ This website can register a new student, log a student in, and allows students t
     <li>Fetch API</li>
     <li>React Testing Library</li>
     <li>Jest</li>
+    <li>UserEvent</li>
     <li>ES6 Javascript</li>
     <li>HTML</li>
     <li>Express</li>
     <li>Cors</li>
-</ul> -->
-React.js | React Router | SASS/SCSS | Git/Github | Fetch API | React Testing Library | UserEvent | Jest | ES6 Javascript | HTML | Express | Cors
+</ul>
 
 <a name="i"></a>
 # Installation
