@@ -1,70 +1,94 @@
-# Getting Started with Create React App
+<a name="mainContents"></a>
+# School Registration Site
+## [Link to back end](https://github.com/Chriscastanuela/Guild-BE)
+> A js project by Christopher Anthony Castanuela
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Contents 
 
-## Available Scripts
+* [About](#about)
+* [Built With](#bw)
+* [Installation](#i)
+* [Testing](#testing)
+* [Final Version](#final-version)
+* [Successes](#successes)
+* [Link to the Author](#ltta)
 
-In the project directory, you can run:
+# About 
+<a name="about"></a>
 
-### `npm start`
+[Back to Main](#mainContents)
+This website can register a new student, log a student in, and allows students to register for a new course
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Built With
+<a name="bw"></a>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[Back to Main](#mainContents)
+<ul>
+    <li>React.js</li>
+    <li>React Router</li>
+    <li>SASS/SCSS</li>
+    <li>Git/Github</li>
+    <li>Fetch API</li>
+    <li>React Testing Library</li>
+    <li>Jest</li>
+    <li>ES6 Javascript</li>
+    <li>HTML</li>
+    <li>Express</li>
+    <li>Cors</li>
+</ul>
 
-### `npm test`
+# Installation
+<a name="i"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[Back to Main](#mainContents)
 
-### `npm run build`
+Open your terminal, run the following commands:
+* `git clone https://github.com/Chriscastanuela/guild-fe.git school-registration`
+* `cd school-registration`
+* `npm i`
+* `npm start`
+* In a separate Terminal window run `git clone https://github.com/Chriscastanuela/Guild-BE.git school-registration-backend`
+* `cd school-registration-backend`
+* `npm i`
+* `npm start`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+# Testing
+<a name="testing"></a>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+[Back to Main](#mainContents)
+After running `npm i` in the folder `school-registration` run `npm test`<br>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<!-- # Wireframe
+<img width="1393" alt="Screen Shot 2020-11-10 at 7 22 53 AM" src="https://user-images.githubusercontent.com/62910433/98686241-8e1d9e80-2325-11eb-9c01-eaaa6d347165.png"> -->
 
-### `npm run eject`
+# Final Version
+[Back to Main](#mainContents)
+<a name="final-version"></a>
+![gif](https://user-images.githubusercontent.com/62910433/111737413-32b86b80-8845-11eb-9285-353873c55018.gif)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+# Successes
+<a name="successes"></a>
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+[Back to Main](#mainContents)</br>
+The site is able to do the following:
+<ul>
+    <li>Register a new student</li>
+    <li>Display the new student ID after registering</li>
+    <li>Fetch existing students from an external API</li>
+    <li>Fetch courses and their information from an external API</li>
+    <li>Post a new course ID to a student</li>
+</ul><br>
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Link to the Author
+<a name="ltta"></a>
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+[Back to Main](#mainContents)
+> Christopher Castanuela [here](https://chriscastanuela.github.io/cac/)
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
+<!-- ### Deployment
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
 ### `npm run build` fails to minify
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify) -->
