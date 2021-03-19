@@ -55,7 +55,7 @@ Open your terminal, run the following commands:
 <a name="testing"></a>
 # Testing
 
-[Back to Main](#mainContents)
+[Back to Main](#mainContents)<br>
 After running `npm i` in the folder `school-registration` run `npm test`<br>
 
 <!-- # Wireframe
@@ -63,7 +63,7 @@ After running `npm i` in the folder `school-registration` run `npm test`<br>
 
 <a name="final-version"></a>
 # Final Version
-[Back to Main](#mainContents)
+[Back to Main](#mainContents)<br>
 ![gif](https://user-images.githubusercontent.com/62910433/111737413-32b86b80-8845-11eb-9285-353873c55018.gif)
 
 <a name="successes"></a>
