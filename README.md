@@ -13,14 +13,14 @@
 * [Successes](#successes)
 * [Link to the Author](#ltta)
 
-# About 
 <a name="about"></a>
+# About 
 
 [Back to Main](#mainContents)
 This website can register a new student, log a student in, and allows students to register for a new course
 
-# Built With
 <a name="bw"></a>
+# Built With
 
 [Back to Main](#mainContents)
 <ul>
@@ -37,8 +37,8 @@ This website can register a new student, log a student in, and allows students t
     <li>Cors</li>
 </ul>
 
-# Installation
 <a name="i"></a>
+# Installation
 
 [Back to Main](#mainContents)
 
@@ -52,8 +52,8 @@ Open your terminal, run the following commands:
 * `npm i`
 * `npm start`
 
-# Testing
 <a name="testing"></a>
+# Testing
 
 [Back to Main](#mainContents)
 After running `npm i` in the folder `school-registration` run `npm test`<br>
@@ -61,13 +61,13 @@ After running `npm i` in the folder `school-registration` run `npm test`<br>
 <!-- # Wireframe
 <img width="1393" alt="Screen Shot 2020-11-10 at 7 22 53 AM" src="https://user-images.githubusercontent.com/62910433/98686241-8e1d9e80-2325-11eb-9c01-eaaa6d347165.png"> -->
 
+<a name="final-version"></a>
 # Final Version
 [Back to Main](#mainContents)
-<a name="final-version"></a>
 ![gif](https://user-images.githubusercontent.com/62910433/111737413-32b86b80-8845-11eb-9285-353873c55018.gif)
 
-# Successes
 <a name="successes"></a>
+# Successes
 
 [Back to Main](#mainContents)</br>
 The site is able to do the following:
@@ -79,8 +79,8 @@ The site is able to do the following:
     <li>Post a new course ID to a student</li>
 </ul><br>
 
-### Link to the Author
 <a name="ltta"></a>
+### Link to the Author
 
 [Back to Main](#mainContents)
 > Christopher Castanuela [here](https://chriscastanuela.github.io/cac/)
