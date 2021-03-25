@@ -16,7 +16,7 @@
 <a name="about"></a>
 # About 
 
-[Back to Main](#mainContents)
+[Back to Main](#mainContents)<br>
 This website can register a new student, log a student in, and allows students to register for a new course
 
 <a name="bw"></a>
