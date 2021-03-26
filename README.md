@@ -3,17 +3,7 @@
 ## [Link to back end](https://github.com/Chriscastanuela/Guild-BE)
 > A js project by Christopher Anthony Castanuela
 
-# Contents 
-
-<!--
-* [About](#about)
-* [Built With](#bw)
-* [Installation](#i)
-* [Testing](#testing)
-* [Final Version](#final-version)
-* [Successes](#successes)
-* [Link to the Author](#ltta)
--->
+# Contents
 
 [About](#about) | [Built With](#bw) | [Installation](#i) | [Testing](#testing) | [Final Version](#final-version) | [Successes](#successes) | [Link to the Author](#ltta)
 
