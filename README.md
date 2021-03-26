@@ -5,6 +5,7 @@
 
 # Contents 
 
+<!--
 * [About](#about)
 * [Built With](#bw)
 * [Installation](#i)
@@ -12,6 +13,7 @@
 * [Final Version](#final-version)
 * [Successes](#successes)
 * [Link to the Author](#ltta)
+-->
 
 [About](#about) | [Built With](#bw) | [Installation](#i) | [Testing](#testing) | [Final Version](#final-version) | [Successes](#successes) | [Link to the Author](#ltta)
 
