@@ -11,7 +11,7 @@
 # About 
 
 [Back to Main](#mainContents)<br>
-This website can register a new student, log a student in, and allows students to register for a new course
+This website can register a new student, log a student in, and allows students to register for a course
 
 <a name="bw"></a>
 # Built With
